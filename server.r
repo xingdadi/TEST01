@@ -31,7 +31,7 @@ shinyServer(function(input, output) {
 
 
 
-  output$main_plot <- renderPlot({
+  output$main_plot <- reactivePlot(function(){
 
     # Take a subset of the data, respecting the limited range
     hw_sub <- limit_data_range()
